@@ -1,0 +1,1175 @@
+diff -urN a/system-config-kickstart-2.9.2/po/bn_IN.po b/system-config-kickstart-2.9.2/po/bn_IN.po
+--- a/system-config-kickstart-2.9.2/po/bn_IN.po	2013-11-28 17:56:09.196959282 +0530
++++ b/system-config-kickstart-2.9.2/po/bn_IN.po	2013-11-28 17:58:20.314156317 +0530
+@@ -1,23 +1,25 @@
+ # SOME DESCRIPTIVE TITLE.
+ # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+ # This file is distributed under the same license as the PACKAGE package.
+-#
++# 
+ # Translators:
+ # runab <runab@redhat.com>, 2004, 2005, 2006, 2007, 2009, 2010
+ # runa <runabh@gmail.com>, 2012
++# sray <sray@redhat.com>, 2013. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: system-config-kickstart\n"
+ "Report-Msgid-Bugs-To: \n"
+ "POT-Creation-Date: 2013-07-26 11:16-0400\n"
+-"PO-Revision-Date: 2013-04-10 20:55+0000\n"
+-"Last-Translator: clumens <clumens@redhat.com>\n"
++"PO-Revision-Date: 2013-10-07 02:21-0400\n"
++"Last-Translator: sray <sray@redhat.com>\n"
+ "Language-Team: Bengali (India) <anubad@lists.ankur.org.in>\n"
+-"Language: bn_IN\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
++"Language: bn-IN\n"
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
++"X-Generator: Zanata 3.1.2\n"
+ 
+ #: ../src/basic.py:71
+ msgid "x86, AMD64, or Intel EM64T"
+@@ -43,95 +45,72 @@
+ msgid "Root passwords do not match."
+ msgstr "root-র পাসওয়ার্ডে গরমিল।"
+ 
+-#: ../src/basic.py:147 ../src/partition.py:256 ../src/install.py:217
+-#: ../src/partWindow.py:577 ../src/raidWindow.py:276
++#: ../src/basic.py:147
++#: ../src/install.py:217
++#: ../src/partition.py:256
++#: ../src/partWindow.py:577
++#: ../src/raidWindow.py:276
+ msgid "Error"
+ msgstr "সমস্যা"
+ 
+ #: ../src/GroupSelector.py:147
+ #, python-format
+ msgid "Packages in %s"
+-msgstr ""
++msgstr "%s এ প্যাকেজগুলি"
+ 
+ #: ../src/GroupSelector.py:433
+ #, python-format
+ msgid "Optional packages selected: %(inst)d of %(cnt)d"
+-msgstr ""
++msgstr "বৈকল্পিক প্যাকেজগুলি নির্বাচিত: %(inst)d of %(cnt)d"
+ 
+ #: ../src/GroupSelector.py:435
+ #, python-format
+ msgid "<i>%s</i>"
+-msgstr ""
++msgstr "<i>%s</i>"
+ 
+ #: ../src/GroupSelector.py:495
+ msgid "Uncategorized"
+-msgstr ""
+-
+-#: ../src/network.py:73
+-msgid "Device"
+-msgstr "ডিভাইস"
+-
+-#: ../src/network.py:76
+-msgid "Network Type"
+-msgstr "নেটওয়ার্কের ধরন"
+-
+-#: ../src/network.py:79 ../src/network.py:114 ../src/network.py:196
+-#: ../src/network.py:251 ../src/network.py:347
+-msgid "Static IP"
+-msgstr "স্থায়ী IP"
++msgstr "অনির্দিষ্ট"
+ 
+-#: ../src/network.py:161 ../src/network.py:219
+-msgid "Please fill in the network information"
+-msgstr "অনুগ্রহ করে নেটওয়ার্ক সম্বন্ধীয় তথ্য পুরণ করুন।"
++#: ../src/install.py:132
++msgid "Please enter an NFS server."
++msgstr "অনুগ্রহ করে একটি NFS সার্ভারের নাম লিখুন।"
+ 
+-#: ../src/network.py:173 ../src/network.py:231
+-msgid "Please enter a valid gateway address."
+-msgstr "অনুগ্রহ করে বৈধ গেটওয়ে ঠিকানা লিখুন।"
++#: ../src/install.py:135
++msgid "Please enter an NFS directory."
++msgstr "অনুগ্রহ করে একটি NFS ডিরেক্টরির নাম লিখুন।"
+ 
+-#: ../src/network.py:185 ../src/network.py:243
+-msgid "Please enter a valid nameserver address."
+-msgstr "অনুগ্রহ করে একটি বৈধ নেম-সার্ভারের ঠিকানা লিখুন।"
++#: ../src/install.py:146
++msgid "Please enter an FTP server."
++msgstr "অনুগ্রহ করে একটি FTP সার্ভারের নাম লিখুন।"
+ 
+-#: ../src/network.py:271
+-#, python-format
+-msgid ""
+-"A network device with the name %s already exists.  Please choose another "
+-"device name"
+-msgstr ""
+-"%s নামের একটি নেটওয়ার্ক ডিভাইস বর্তমানে উপস্থিত আছে।  অনুগ্রহ করে ডিভাইসের জন্য "
+-"একটি পৃথক নাম নির্বাচন করুন"
++#: ../src/install.py:153
++msgid "Please enter an FTP directory."
++msgstr "অনুগ্রহ করে একটি FTP ডিরেক্টরির নাম লিখুন।"
+ 
+-#: ../src/partition.py:72
+-msgid ""
+-"Device/\n"
+-"Partition Number"
+-msgstr ""
+-"ডিভাইস/\n"
+-"পার্টিশন সংখ্যা"
++#: ../src/install.py:159
++msgid "Please enter an FTP user name."
++msgstr "অনুগ্রহ করে FTP ব্যবহারকারীর নাম লিখুন।"
+ 
+-#: ../src/partition.py:74
+-msgid ""
+-"Mount Point/\n"
+-"RAID"
+-msgstr ""
+-"মাউন্ট-পয়েন্ট/\n"
+-"RAID"
++#: ../src/install.py:162
++msgid "Please enter an FTP password."
++msgstr "অনুগ্রহ করে FTP পাসওয়ার্ড লিখুন।"
+ 
+-#: ../src/partition.py:76
+-msgid "Type"
+-msgstr "ধরন"
++#: ../src/install.py:178
++msgid "Please enter an HTTP server."
++msgstr "অনুগ্রহ করে একটি HTTP সার্ভারের নাম লিখুন।"
+ 
+-#: ../src/partition.py:78
+-msgid "Format"
+-msgstr "ফরম্যাট"
++#: ../src/install.py:181
++msgid "Please enter an HTTP server directory."
++msgstr "অনুগ্রহ করে একটি HTTP সার্ভার ডিরেক্টরির নাম লিখুন।"
+ 
+-#: ../src/partition.py:80
+-msgid "Size (MB)"
+-msgstr "মাপ (মেগাবাইট)"
++#: ../src/install.py:203
++msgid "Please enter a hard drive directory."
++msgstr "অনুগ্রহ করে হার্ড-ড্রাইভের একটি ডিরেক্টরির নাম লিখুন।"
+ 
+-#: ../src/partition.py:98 ../src/partition.py:138
+-msgid "Please select a partition from the list."
+-msgstr "অনুগ্রহ করে তালিকা থেকে একটি পার্টিশন নির্বাচন করুন।"
++#: ../src/install.py:206
++msgid "Please enter a hard drive partition."
++msgstr "অনুগ্রহ করে হার্ড-ড্রাইভের একটি পার্টিশন উল্লেখ করুন।"
+ 
+ #: ../src/kickstartGui.py:82
+ msgid ""
+@@ -149,19 +128,21 @@
+ "this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
+ "Ave, Cambridge, MA 02139, USA."
+ msgstr ""
+-"এটি একটি মুক্ত সফ্টওয়্যার; Free Software Foundation দ্বারা প্রকাশিত GNU General "
+-"Public License-র শর্তানুযায়ী এটি বিতরণ ও পরিবর্তন করা যাবে; লাইসেন্সের সংস্করণ ২ "
+-"অথবা (আপনার সুবিধানুযায়ী) ঊর্ধ্বতন কোনো সংস্করণের অধীন।\n"
++"এটি একটি মুক্ত সফ্টওয়্যার; Free Software Foundation দ্বারা প্রকাশিত GNU "
++"General Public License-র শর্তানুযায়ী এটি বিতরণ ও পরিবর্তন করা যাবে; "
++"লাইসেন্সের সংস্করণ ২ অথবা (আপনার সুবিধানুযায়ী) ঊর্ধ্বতন কোনো সংস্করণের অধীন।\n"
+ "\n"
+-"এই প্রোগ্রামটি বিতরণ করার মূল উদ্দেশ্য যে ব্যবহারকারীরা এর দ্বারা উপকৃত হবেন, কিন্তু "
+-"এটির জন্য কোনো সুস্পষ্ট ওয়ারেন্টি উপস্থিত নেই; বাণিজ্যিক ও কোনো সুনির্দিষ্ট কর্ম সাধনের "
+-"জন্য অন্তর্নিহীত ওয়ারেন্টিও অনুপস্থিত। অধিক জানতে GNU General Public License পড়ুন।\n"
++"এই প্রোগ্রামটি বিতরণ করার মূল উদ্দেশ্য যে ব্যবহারকারীরা এর দ্বারা উপকৃত "
++"হবেন, কিন্তু এটির জন্য কোনো সুস্পষ্ট ওয়ারেন্টি উপস্থিত নেই; বাণিজ্যিক ও কোনো "
++"সুনির্দিষ্ট কর্ম সাধনের জন্য অন্তর্নিহীত ওয়ারেন্টিও অনুপস্থিত। অধিক জানতে "
++"GNU General Public License পড়ুন।\n"
+ "\n"
+-"এই প্রোগ্রামের সাথে GNU General Public License-র একটি প্রতিলিপি উপলব্ধ হওয়াউচিত; "
+-"না থাকলে নিম্নলিখিত ঠিকানায় লিখে তা সংগ্রহ করুন Free Software Foundation, Inc., "
+-"675 Mass Ave, Cambridge, MA 02139, USA"
++"এই প্রোগ্রামের সাথে GNU General Public License-র একটি প্রতিলিপি উপলব্ধ "
++"হওয়াউচিত; না থাকলে নিম্নলিখিত ঠিকানায় লিখে তা সংগ্রহ করুন Free Software "
++"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA"
+ 
+-#: ../src/kickstartGui.py:125 ../src/kickstartGui.py:302
++#: ../src/kickstartGui.py:125
++#: ../src/kickstartGui.py:302
+ #, python-format
+ msgid ""
+ "The following error was found while parsing your kickstart configuration:\n"
+@@ -172,12 +153,14 @@
+ "\n"
+ "%s"
+ 
+-#: ../src/kickstartGui.py:128 ../src/kickstartGui.py:305
++#: ../src/kickstartGui.py:128
++#: ../src/kickstartGui.py:305
+ #, python-format
+ msgid "The kickstart file %s could not be opened."
+ msgstr "%s kickstart ফাইল খোলা যায়নি।"
+ 
+-#: ../src/kickstartGui.py:133 ../src/kickstartGui.py:310
++#: ../src/kickstartGui.py:133
++#: ../src/kickstartGui.py:310
+ msgid "Error Parsing Kickstart Config"
+ msgstr "Kickstart কনফিগ পার্স করতে সমস্যা"
+ 
+@@ -246,7 +229,8 @@
+ msgid "The file \"%s\" cannot be accessed."
+ msgstr "\"%s\" ফাইলটি ব্যবহার করা সম্ভব নয়।"
+ 
+-#: ../src/kickstartGui.py:341 ../src/kickstartGui.py:352
++#: ../src/kickstartGui.py:341
++#: ../src/kickstartGui.py:352
+ #: ../src/packages.py:207
+ msgid "Retrieving package information"
+ msgstr "প্যাকেজ সংক্রান্ত তথ্য আহরণ করা হচ্ছে"
+@@ -256,45 +240,34 @@
+ msgid "You currently have %d software RAID partition(s) free to use."
+ msgstr "বর্তমানে %d-টি সফ্টওয়্যার RAID পার্টিশন ব্যবহারের জন্য উপলব্ধ রয়েছে।"
+ 
+-#: ../src/install.py:132
+-msgid "Please enter an NFS server."
+-msgstr "অনুগ্রহ করে একটি NFS সার্ভারের নাম লিখুন।"
+-
+-#: ../src/install.py:135
+-msgid "Please enter an NFS directory."
+-msgstr "অনুগ্রহ করে একটি NFS ডিরেক্টরির নাম লিখুন।"
+-
+-#: ../src/install.py:146
+-msgid "Please enter an FTP server."
+-msgstr "অনুগ্রহ করে একটি FTP সার্ভারের নাম লিখুন।"
+-
+-#: ../src/install.py:153
+-msgid "Please enter an FTP directory."
+-msgstr "অনুগ্রহ করে একটি FTP ডিরেক্টরির নাম লিখুন।"
+-
+-#: ../src/install.py:159
+-msgid "Please enter an FTP user name."
+-msgstr "অনুগ্রহ করে FTP ব্যবহারকারীর নাম লিখুন।"
++#: ../src/partition.py:72
++msgid "Device/\n"
++"Partition Number"
++msgstr "ডিভাইস/\n"
++"পার্টিশন সংখ্যা"
+ 
+-#: ../src/install.py:162
+-msgid "Please enter an FTP password."
+-msgstr "অনুগ্রহ করে FTP পাসওয়ার্ড লিখুন।"
++#: ../src/partition.py:74
++msgid "Mount Point/\n"
++"RAID"
++msgstr "মাউন্ট-পয়েন্ট/\n"
++"RAID"
+ 
+-#: ../src/install.py:178
+-msgid "Please enter an HTTP server."
+-msgstr "অনুগ্রহ করে একটি HTTP সার্ভারের নাম লিখুন।"
++#: ../src/partition.py:76
++msgid "Type"
++msgstr "ধরন"
+ 
+-#: ../src/install.py:181
+-msgid "Please enter an HTTP server directory."
+-msgstr "অনুগ্রহ করে একটি HTTP সার্ভার ডিরেক্টরির নাম লিখুন।"
++#: ../src/partition.py:78
++msgid "Format"
++msgstr "ফরম্যাট"
+ 
+-#: ../src/install.py:203
+-msgid "Please enter a hard drive directory."
+-msgstr "অনুগ্রহ করে হার্ড-ড্রাইভের একটি ডিরেক্টরির নাম লিখুন।"
++#: ../src/partition.py:80
++msgid "Size (MB)"
++msgstr "মাপ (মেগাবাইট)"
+ 
+-#: ../src/install.py:206
+-msgid "Please enter a hard drive partition."
+-msgstr "অনুগ্রহ করে হার্ড-ড্রাইভের একটি পার্টিশন উল্লেখ করুন।"
++#: ../src/partition.py:98
++#: ../src/partition.py:138
++msgid "Please select a partition from the list."
++msgstr "অনুগ্রহ করে তালিকা থেকে একটি পার্টিশন নির্বাচন করুন।"
+ 
+ #: ../src/packages.py:144
+ #, python-format
+@@ -304,9 +277,9 @@
+ "\n"
+ "%s"
+ msgstr ""
+-"সেট-আপের মধ্যে উপস্থিত একটি সমস্যার কারণে প্যাকেজ নির্বাচন ব্যবস্থা বর্তমানে নিষ্ক্রিয় "
+-"করা হয়েছে।  অনুগ্রহ করে সংগ্রহস্থল সংক্রান্ত কনফিগারেশনের ত্রুটি সংশোধন করে পুনরায় "
+-"প্রচেষ্টা করুন।\n"
++"সেট-আপের মধ্যে উপস্থিত একটি সমস্যার কারণে প্যাকেজ নির্বাচন ব্যবস্থা বর্তমানে "
++"নিষ্ক্রিয় করা হয়েছে।  অনুগ্রহ করে সংগ্রহস্থল সংক্রান্ত কনফিগারেশনের ত্রুটি "
++"সংশোধন করে পুনরায় প্রচেষ্টা করুন।\n"
+ "\n"
+ "%s"
+ 
+@@ -319,7 +292,48 @@
+ "Package selection is disabled due to problems downloading package "
+ "information."
+ msgstr ""
+-"প্যাকেজ সংক্রান্ত তথ্য ডাউনলোডের সমস্যার দরুণ প্যাকেজ নির্বাচন নিষ্ক্রিয় করা হয়েছে।"
++"প্যাকেজ সংক্রান্ত তথ্য ডাউনলোডের সমস্যার দরুণ প্যাকেজ নির্বাচন নিষ্ক্রিয় করা "
++"হয়েছে।"
++
++#: ../src/network.py:73
++msgid "Device"
++msgstr "ডিভাইস"
++
++#: ../src/network.py:76
++msgid "Network Type"
++msgstr "নেটওয়ার্কের ধরন"
++
++#: ../src/network.py:79
++#: ../src/network.py:114
++#: ../src/network.py:196
++#: ../src/network.py:251
++#: ../src/network.py:347
++msgid "Static IP"
++msgstr "স্থায়ী IP"
++
++#: ../src/network.py:161
++#: ../src/network.py:219
++msgid "Please fill in the network information"
++msgstr "অনুগ্রহ করে নেটওয়ার্ক সম্বন্ধীয় তথ্য পুরণ করুন।"
++
++#: ../src/network.py:173
++#: ../src/network.py:231
++msgid "Please enter a valid gateway address."
++msgstr "অনুগ্রহ করে বৈধ গেটওয়ে ঠিকানা লিখুন।"
++
++#: ../src/network.py:185
++#: ../src/network.py:243
++msgid "Please enter a valid nameserver address."
++msgstr "অনুগ্রহ করে একটি বৈধ নেম-সার্ভারের ঠিকানা লিখুন।"
++
++#: ../src/network.py:271
++#, python-format
++msgid ""
++"A network device with the name %s already exists.  Please choose another "
++"device name"
++msgstr ""
++"%s নামের একটি নেটওয়ার্ক ডিভাইস বর্তমানে উপস্থিত আছে।  অনুগ্রহ করে ডিভাইসের "
++"জন্য একটি পৃথক নাম নির্বাচন করুন"
+ 
+ #: ../src/savedialog.py:77
+ #, python-format
+@@ -347,8 +361,8 @@
+ "You have choosen the following configuration. Click Save File to save the "
+ "kickstart file."
+ msgstr ""
+-"আপনি নিম্নোক্ত কনফিগারেশন নির্বাচন করেছেন। ফাইল সংরক্ষণ-এ ক্লিক করে kickstart "
+-"ফাইলটি সংরক্ষণ করুন।"
++"আপনি নিম্নোক্ত কনফিগারেশন নির্বাচন করেছেন। ফাইল সংরক্ষণ-এ ক্লিক করে "
++"kickstart ফাইলটি সংরক্ষণ করুন।"
+ 
+ #: ../src/bootloader.py:150
+ msgid "Grub passwords do not match.  Please try again."
+@@ -372,7 +386,8 @@
+ msgstr "ext4"
+ 
+ #. _("physical volume (LVM)"):"lvm",
+-#: ../src/partWindow.py:100 ../src/partWindow.py:175
++#: ../src/partWindow.py:100
++#: ../src/partWindow.py:175
+ msgid "software RAID"
+ msgstr "সফ্টওয়্যার RAID"
+ 
+@@ -388,15 +403,21 @@
+ msgid "PPC PReP Boot"
+ msgstr "PPC PReP Boot"
+ 
+-#: ../src/partWindow.py:317 ../src/partWindow.py:599 ../src/raidWindow.py:241
++#: ../src/partWindow.py:317
++#: ../src/partWindow.py:599
++#: ../src/raidWindow.py:241
+ msgid "Yes"
+ msgstr "হ্যাঁ"
+ 
+-#: ../src/partWindow.py:319 ../src/partWindow.py:601 ../src/raidWindow.py:243
++#: ../src/partWindow.py:319
++#: ../src/partWindow.py:601
++#: ../src/raidWindow.py:243
+ msgid "No"
+ msgstr "না"
+ 
+-#: ../src/partWindow.py:342 ../src/partWindow.py:357 ../src/partWindow.py:376
++#: ../src/partWindow.py:342
++#: ../src/partWindow.py:357
++#: ../src/partWindow.py:376
+ #: ../src/partWindow.py:390
+ msgid "Auto"
+ msgstr "স্বয়ংক্রিয়"
+@@ -414,9 +435,10 @@
+ #, python-format
+ msgid ""
+ "The mount point \"%s\" is already in use.  Please select another mount point."
++""
+ msgstr ""
+-"\"%s\" মাউন্ট-পয়েন্ট বর্তমানে ব্যবহৃত হচ্ছে। অনুগ্রহ করে একটি পৃথক মাউন্ট-পয়েন্ট "
+-"নির্বাচন করুন।"
++"\"%s\" মাউন্ট-পয়েন্ট বর্তমানে ব্যবহৃত হচ্ছে। অনুগ্রহ করে একটি পৃথক মাউন্ট-"
++"পয়েন্ট নির্বাচন করুন।"
+ 
+ #: ../src/partWindow.py:524
+ msgid ""
+@@ -435,8 +457,8 @@
+ "The partition you specified does not end in a number.  Partitions must have "
+ "a partition number such as \"hda1\" or \"sda3\"."
+ msgstr ""
+-"আপনার দ্বারা উল্লিখিত পার্টিশনের নামের শেষে কোনো সংখ্যা উপস্থিত নেই। পার্টিশনের "
+-"নামে একটি সংখ্যা উপস্থিত থাকা আবশ্যক যেমন \"hda1\" অথবা \"sda3\""
++"আপনার দ্বারা উল্লিখিত পার্টিশনের নামের শেষে কোনো সংখ্যা উপস্থিত নেই। "
++"পার্টিশনের নামে একটি সংখ্যা উপস্থিত থাকা আবশ্যক যেমন \"hda1\" অথবা \"sda3\""
+ 
+ #: ../src/raidWindow.py:201
+ #, python-format
+@@ -448,7 +470,8 @@
+ msgid "You must select at least 3 partitions in order to use RAID %s"
+ msgstr "RAID %s ব্যবহারের জন্য অন্তত ৩টি পার্টিশন নির্বাচন করা আবশ্যক"
+ 
+-#: ../src/raidWindow.py:221 ../src/raidWindow.py:247
++#: ../src/raidWindow.py:221
++#: ../src/raidWindow.py:247
+ msgid "Raid Devices"
+ msgstr "Raid ডিভাইস"
+ 
+@@ -458,11 +481,11 @@
+ 
+ #: tmp/GroupSelector.glade.h:1
+ msgid "_Optional packages"
+-msgstr ""
++msgstr "বৈকল্পিক প্যাকেজগুলি (_O)"
+ 
+ #: tmp/GroupSelector.glade.h:2
+ msgid "dialog1"
+-msgstr ""
++msgstr "ডায়ালগ1"
+ 
+ #: tmp/GroupSelector.glade.h:3
+ msgid ""
+@@ -470,22 +493,25 @@
+ "but may provide additional functionality.  Please choose the packages which "
+ "you would like to have installed."
+ msgstr ""
++"এই গ্রুপের সংগে সংশ্লিষ্ট কিছু প্যাকেজ ইনস্টল করার প্রয়োজন নেই তবে তা "
++"অতিরিক্ত কার্যকারিতা প্রদান করতে পারে।  অাপনি যে প্যাকেজগুলি ইনস্টল করতে চান "
++"অনুগ্রহ করে তাদের বেছে নিন।"
+ 
+ #: tmp/GroupSelector.glade.h:4
+ msgid "_Select"
+-msgstr ""
++msgstr "নির্বাচন করুন (_S)"
+ 
+ #: tmp/GroupSelector.glade.h:5
+ msgid "_Select all optional packages"
+-msgstr ""
++msgstr "সকল বৈকল্পিক প্যাকেজ নির্বাচন করুন (_S)"
+ 
+ #: tmp/GroupSelector.glade.h:6
+ msgid "_Deselect"
+-msgstr ""
++msgstr "নির্বাচন মুক্ত করুন (_D)"
+ 
+ #: tmp/GroupSelector.glade.h:7
+ msgid "_Deselect all optional packages"
+-msgstr ""
++msgstr "সকল বৈকল্পিক প্যাকেজ নির্বাচন মুক্ত করুন (_D)"
+ 
+ #: tmp/system-config-kickstart.glade.h:1
+ msgid "Partition Options"
+@@ -996,12 +1022,10 @@
+ msgstr "SELinux:"
+ 
+ #: tmp/system-config-kickstart.glade.h:128
+-msgid ""
+-"Active\n"
++msgid "Active\n"
+ "Warn\n"
+ "Disabled\n"
+-msgstr ""
+-"Active (সক্রিয়)\n"
++msgstr "Active (সক্রিয়)\n"
+ "Warn (সতর্কতামূলক)\n"
+ "Disabled (নিষ্ক্রিয়)\n"
+ 
+@@ -1010,11 +1034,9 @@
+ msgstr "নিরাপত্তার মাত্রা:"
+ 
+ #: tmp/system-config-kickstart.glade.h:133
+-msgid ""
+-"Enable firewall\n"
++msgid "Enable firewall\n"
+ "Disable firewall\n"
+-msgstr ""
+-"ফায়ারওয়াল সক্রিয়\n"
++msgstr "ফায়ারওয়াল সক্রিয়\n"
+ "ফায়ারওয়াল নিষ্ক্রিয়\n"
+ 
+ #: tmp/system-config-kickstart.glade.h:136
+@@ -1034,8 +1056,7 @@
+ msgstr "প্রথমবার বুট করার সময়, Setup Agent: "
+ 
+ #: tmp/system-config-kickstart.glade.h:140
+-msgid ""
+-"Disabled\n"
++msgid "Disabled\n"
+ "Enabled\n"
+ "Enabled in reconfiguration mode\n"
+ msgstr ""
+@@ -1061,8 +1082,8 @@
+ "An error in this script might cause your kickstart installation to fail. Do "
+ "not include the %pre command at the beginning."
+ msgstr ""
+-"এই স্ক্রিপ্টের মধ্যে উপস্থিত কোনো ত্রুটির দরুণ আপনার kickstart ইনস্টলেশন ব্যর্থ হতে "
+-"পারে। %pre কমান্ডটি আরম্ভে অন্তর্ভুক্ত করবেন না।"
++"এই স্ক্রিপ্টের মধ্যে উপস্থিত কোনো ত্রুটির দরুণ আপনার kickstart ইনস্টলেশন "
++"ব্যর্থ হতে পারে। %pre কমান্ডটি আরম্ভে অন্তর্ভুক্ত করবেন না।"
+ 
+ #: tmp/system-config-kickstart.glade.h:149
+ msgid "Use an interpreter:"
+@@ -1083,8 +1104,8 @@
+ "An error in this script might cause your kickstart installation to fail. Do "
+ "not include the %post command at the beginning."
+ msgstr ""
+-"এই স্ক্রিপ্টের মধ্যে উপস্থিত কোনো ত্রুটির দরুণ আপনার kickstart ইনস্টলেশন ব্যর্থ হতে "
+-"পারে। %post কমান্ডটি আরম্ভে অন্তর্ভুক্ত করবেন না।"
++"এই স্ক্রিপ্টের মধ্যে উপস্থিত কোনো ত্রুটির দরুণ আপনার kickstart ইনস্টলেশন "
++"ব্যর্থ হতে পারে। %post কমান্ডটি আরম্ভে অন্তর্ভুক্ত করবেন না।"
+ 
+ #: tmp/system-config-kickstart.glade.h:155
+ msgid "Run outside of the chroot environment"
+@@ -1105,24 +1126,25 @@
+ 
+ #: tmp/system-config-kickstart.glade.h:160
+ msgid ""
+-"Software RAID allows you to combine several disks into a larger RAID "
+-"device.  A RAID device can be configured to provide additional speed and "
+-"reliability compared to using an individual drive.  For more information on "
+-"using RAID devices please consult the kickstart documentation."
+-msgstr ""
+-"সফ্টওয়্যার RAID-র সাহায্যে আপনি একাধিক ডিস্ক একত্র করে একটি বড় RAID ডিভাইস তৈরি "
+-"করতে পারবেন। একটি স্বতন্ত্র ড্রাইভের তুলনায় RAID ডিভাইস অধিক দ্রুত এবং নির্ভরযোগ্য "
+-"পরিসেবার জন্য কনফিগার করা সম্ভব। RAID ডিভাইস সম্বন্ধে অধিক তথ্যের জন্য kickstart "
+-"সহায়িকা পড়ুন।"
++"Software RAID allows you to combine several disks into a larger RAID device. "
++" A RAID device can be configured to provide additional speed and reliability "
++"compared to using an individual drive.  For more information on using RAID "
++"devices please consult the kickstart documentation."
++msgstr ""
++"সফ্টওয়্যার RAID-র সাহায্যে আপনি একাধিক ডিস্ক একত্র করে একটি বড় RAID ডিভাইস "
++"তৈরি করতে পারবেন। একটি স্বতন্ত্র ড্রাইভের তুলনায় RAID ডিভাইস অধিক দ্রুত এবং "
++"নির্ভরযোগ্য পরিসেবার জন্য কনফিগার করা সম্ভব। RAID ডিভাইস সম্বন্ধে অধিক "
++"তথ্যের জন্য kickstart সহায়িকা পড়ুন।"
+ 
+ #: tmp/system-config-kickstart.glade.h:161
+ msgid ""
+ "To use RAID you must first create at least two partitions of type 'software "
+ "RAID'.  Then you can create a RAID device which can be formatted and mounted."
++""
+ msgstr ""
+-"RAID ব্যবহার করার পূর্বে 'সফ্টওয়্যার RAID' ধরনের অন্তত দুটি পার্টিশন তৈরি করা "
+-"আবশ্যক।  তারপর আপনি একটি RAID ডিভাইস নির্মাণ করে সেটি ফরম্যাট এবং মাউন্ট করতে "
+-"পারবেন।"
++"RAID ব্যবহার করার পূর্বে 'সফ্টওয়্যার RAID' ধরনের অন্তত দুটি পার্টিশন তৈরি "
++"করা আবশ্যক।  তারপর আপনি একটি RAID ডিভাইস নির্মাণ করে সেটি ফরম্যাট এবং মাউন্ট "
++"করতে পারবেন।"
+ 
+ #: tmp/system-config-kickstart.glade.h:162
+ msgid "Choose one of the following options:"
+diff -urN a/system-config-kickstart-2.9.2/po/pa.po b/system-config-kickstart-2.9.2/po/pa.po
+--- a/system-config-kickstart-2.9.2/po/pa.po	2013-11-28 17:56:09.194959265 +0530
++++ b/system-config-kickstart-2.9.2/po/pa.po	2013-11-28 17:58:20.314156317 +0530
+@@ -1,7 +1,7 @@
+ # SOME DESCRIPTIVE TITLE.
+ # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+ # This file is distributed under the same license as the PACKAGE package.
+-#
++# 
+ # Translators:
+ # Amanpreet Singh Alam <aalam@redhat.com>, 2004,2006
+ # Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005
+@@ -11,19 +11,21 @@
+ # harmeet <harmeetphulewala@yahoo.com>, 2005
+ # Jaswinder Singh <jsingh@redhat.com>, 2007,2009-2010
+ # Jaswinder Singh Phulewala <jaswinderphulewala@yahoo.com>, 2005,2012
++# asaini <asaini@redhat.com>, 2013. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: system-config-kickstart\n"
+ "Report-Msgid-Bugs-To: \n"
+ "POT-Creation-Date: 2013-07-26 11:16-0400\n"
+-"PO-Revision-Date: 2013-04-10 20:55+0000\n"
+-"Last-Translator: clumens <clumens@redhat.com>\n"
++"PO-Revision-Date: 2013-10-09 12:57-0400\n"
++"Last-Translator: asaini <asaini@redhat.com>\n"
+ "Language-Team: Panjabi (Punjabi) <punjabi-users@lists.sf.net>\n"
+-"Language: pa\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
++"Language: pa\n"
+ "Plural-Forms: nplurals=2; plural=(n != 1);\n"
++"X-Generator: Zanata 3.1.2\n"
+ 
+ #: ../src/basic.py:71
+ msgid "x86, AMD64, or Intel EM64T"
+@@ -49,93 +51,72 @@
+ msgid "Root passwords do not match."
+ msgstr "ਪ੍ਰਬੰਧਕ (root) ਦਾ ਪਾਸਵਰਡ ਮੇਲ ਨਹੀਂ ਖਾ ਰਿਹਾ ਹੈ।"
+ 
+-#: ../src/basic.py:147 ../src/partition.py:256 ../src/install.py:217
+-#: ../src/partWindow.py:577 ../src/raidWindow.py:276
++#: ../src/basic.py:147
++#: ../src/install.py:217
++#: ../src/partition.py:256
++#: ../src/partWindow.py:577
++#: ../src/raidWindow.py:276
+ msgid "Error"
+ msgstr "ਗਲਤੀ"
+ 
+ #: ../src/GroupSelector.py:147
+ #, python-format
+ msgid "Packages in %s"
+-msgstr ""
++msgstr "%s ਵਿੱਚ ਪੰਡਾਂ (packages)"
+ 
+ #: ../src/GroupSelector.py:433
+ #, python-format
+ msgid "Optional packages selected: %(inst)d of %(cnt)d"
+-msgstr ""
++msgstr "ਵਿਕਲਪਿਕ ਪੰਡਾਂ (packages) ਚੁਣੀਆਂ ਗਈਆਂ: %(inst)d  ਕੁੱਲ %(cnt)d ਵਿੱਚੋਂ"
+ 
+ #: ../src/GroupSelector.py:435
+ #, python-format
+ msgid "<i>%s</i>"
+-msgstr ""
++msgstr "<i>%s</i>"
+ 
+ #: ../src/GroupSelector.py:495
+ msgid "Uncategorized"
+-msgstr ""
+-
+-#: ../src/network.py:73
+-msgid "Device"
+-msgstr "ਜੰਤਰ"
+-
+-#: ../src/network.py:76
+-msgid "Network Type"
+-msgstr "ਨੈੱਟਵਰਕ ਕਿਸਮ"
+-
+-#: ../src/network.py:79 ../src/network.py:114 ../src/network.py:196
+-#: ../src/network.py:251 ../src/network.py:347
+-msgid "Static IP"
+-msgstr "ਸਥਿਰ IP"
++msgstr "ਗੈਰ-ਸ਼੍ਰੇਣੀ ਬੱਧ"
+ 
+-#: ../src/network.py:161 ../src/network.py:219
+-msgid "Please fill in the network information"
+-msgstr "ਕਿਰਪਾ ਕਰਕੇ ਨੈੱਟਵਰਕ ਜਾਣਕਾਰੀ ਭਰੋ"
++#: ../src/install.py:132
++msgid "Please enter an NFS server."
++msgstr "ਇੱਕ NFS ਸਰਵਰ ਦਿਓ ਜੀ।"
+ 
+-#: ../src/network.py:173 ../src/network.py:231
+-msgid "Please enter a valid gateway address."
+-msgstr "ਕਿਰਪਾ ਕਰਕੇ ਸਹੀ ਗੇਟਵੇ ਐਡਰੈੱਸ ਦਿਓ।"
++#: ../src/install.py:135
++msgid "Please enter an NFS directory."
++msgstr "ਇੱਕ NFS ਡਾਇਰੈਕਟਰੀ ਦਿਓ ਜੀ।"
+ 
+-#: ../src/network.py:185 ../src/network.py:243
+-msgid "Please enter a valid nameserver address."
+-msgstr "ਕਿਰਪਾ ਕਰਕੇ ਸਹੀ ਨਾਂ-ਸਰਵਰ ਐਡਰੈੱਸ ਦਿਓ।"
++#: ../src/install.py:146
++msgid "Please enter an FTP server."
++msgstr "ਇੱਕ FTP ਸਰਵਰ ਦਾ ਨਾਂ ਦਿਓ ਜੀ।"
+ 
+-#: ../src/network.py:271
+-#, python-format
+-msgid ""
+-"A network device with the name %s already exists.  Please choose another "
+-"device name"
+-msgstr "ਨੈੱਟਵਰਕ ਜੰਤਰ ਨਾਂ %s ਨਾਲ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਵੱਖਰਾ ਜੰਤਰ ਚੁਣੋ।"
++#: ../src/install.py:153
++msgid "Please enter an FTP directory."
++msgstr "ਇੱਕ FTP ਡਾਇਰੈਕਟਰੀ ਦਿਓ ਜੀ।"
+ 
+-#: ../src/partition.py:72
+-msgid ""
+-"Device/\n"
+-"Partition Number"
+-msgstr ""
+-"ਜੰਤਰ/\n"
+-"ਭਾਗ ਨੰਬਰ"
++#: ../src/install.py:159
++msgid "Please enter an FTP user name."
++msgstr "ਇੱਕ FTP ਉਪਭੋਗੀ ਨਾਂ ਦਿਓ ਜੀ।"
+ 
+-#: ../src/partition.py:74
+-msgid ""
+-"Mount Point/\n"
+-"RAID"
+-msgstr ""
+-"ਮਾਊਂਟ ਸਥਿਤੀ/\n"
+-"ਰੇਡ(RAID)"
++#: ../src/install.py:162
++msgid "Please enter an FTP password."
++msgstr "ਇੱਕ FTP ਪਾਸਵਰਡ ਦਿਓ ਜੀ।"
+ 
+-#: ../src/partition.py:76
+-msgid "Type"
+-msgstr "ਕਿਸਮ"
++#: ../src/install.py:178
++msgid "Please enter an HTTP server."
++msgstr "ਇੱਕ HTTP ਸਰਵਰ ਦਾ ਨਾਂ ਦਿਓ ਜੀ।"
+ 
+-#: ../src/partition.py:78
+-msgid "Format"
+-msgstr "ਫਾਰਮੈਟ"
++#: ../src/install.py:181
++msgid "Please enter an HTTP server directory."
++msgstr "ਇੱਕ HTTP ਸਰਵਰ ਡਾਇਰੈਕਟਰੀ ਦਿਓ ਜੀ।"
+ 
+-#: ../src/partition.py:80
+-msgid "Size (MB)"
+-msgstr "ਅਕਾਰ (MB)"
++#: ../src/install.py:203
++msgid "Please enter a hard drive directory."
++msgstr "ਇੱਕ ਹਾਰਡ ਡਿਸਕ ਡਾਇਰੈਕਟਰੀ ਦਿਓ ਜੀ।"
+ 
+-#: ../src/partition.py:98 ../src/partition.py:138
+-msgid "Please select a partition from the list."
+-msgstr "ਕਿਰਪਾ ਕਰਕੇ ਸੂਚੀ ਵਿੱਚੋ ਭਾਗ ਚੁਣੋ।"
++#: ../src/install.py:206
++msgid "Please enter a hard drive partition."
++msgstr "ਇੱਕ ਹਾਰਡ ਡਿਸਕ ਭਾਗ ਦਿਓ ਜੀ।"
+ 
+ #: ../src/kickstartGui.py:82
+ msgid ""
+@@ -153,34 +134,37 @@
+ "this program; if not, write to the Free Software Foundation, Inc., 675 Mass "
+ "Ave, Cambridge, MA 02139, USA."
+ msgstr ""
+-"ਇਹ ਪਰੋਗਰਾਮ ਫਰੀ ਸਾਫਟਵੇਅਰ ਹੈ; ਤੁਸੀਂ ਇਸ ਨੂੰ ਮੁੜ-ਵੰਡ ਅਤੇ/ਜਾਂ ਸੋਧ ਸਕਦੇ ਹੋ GNU ਜਨਰਲ ਪਬਲਿਕ ਲਾਈਸੈੰਸ "
+-"ਦੀਆਂ ਸ਼ਰਤਾਂ ਮੁਤਾਬਕ ਜੋ ਫਰੀ ਸਾਫਟਵੇਅਰ ਫਾਊਡੇਸ਼ਨ ਦੁਆਰਾ ਪਬਲਿਸ ਕੀਤਾ ਗਿਆ ਹੈ; ਲਾਈਸੈੰਸ ਦਾ ਵਰਜਨ 2, "
+-"ਜਾਂ (ਤੁਹਾਡੀ ਚੋਣ ਮੁਤਾਬਕ) ਕੋਈ ਬਾਅਦ ਵਾਲਾ ਵਰਜਨ\n"
++"ਇਹ ਪਰੋਗਰਾਮ ਫਰੀ ਸਾਫਟਵੇਅਰ ਹੈ; ਤੁਸੀਂ ਇਸ ਨੂੰ ਮੁੜ-ਵੰਡ ਅਤੇ/ਜਾਂ ਸੋਧ ਸਕਦੇ ਹੋ GNU "
++"ਜਨਰਲ ਪਬਲਿਕ ਲਾਈਸੈੰਸ ਦੀਆਂ ਸ਼ਰਤਾਂ ਮੁਤਾਬਕ ਜੋ ਫਰੀ ਸਾਫਟਵੇਅਰ ਫਾਊਡੇਸ਼ਨ ਦੁਆਰਾ ਪਬਲਿਸ "
++"ਕੀਤਾ ਗਿਆ ਹੈ; ਲਾਈਸੈੰਸ ਦਾ ਵਰਜਨ 2, ਜਾਂ (ਤੁਹਾਡੀ ਚੋਣ ਮੁਤਾਬਕ) ਕੋਈ ਬਾਅਦ ਵਾਲਾ ਵਰਜਨ\n"
+ "\n"
+-"ਇਸ ਪਰੋਗਰਾਮ ਨੂੰ ਵੰਡਣ ਦਾ ਉਦੇਸ਼ ਹੈ ਕਿ ਇਹ ਵਰਤਣਯੋਗ ਹੋਵੇਗਾ, ਪਰ ਬਿਨਾਂ ਕਿਸੇ ਵਾਰੰਟੀ; ਵਿਕਰੇਤਾ ਦੀ "
+-"ਗਾਰੰਟੀ ਤੋਂ ਵੀ ਬਿਨਾਂ ਜਾਂ ਖਾਸ ਉਦੇਸ਼ ਦੇ ਯੋਗ ਹੋਣ ਦੀ ਗਾਰੰਟੀ ਤੋਂ ਬਿਨਾਂ। ਵੇਰਵੇ ਲਈ GNU ਜਨਰਲ ਪਬਲਿਕ "
+-"ਲਾਈਸੈੰਸ ਵੇਖੋ।\n"
++"ਇਸ ਪਰੋਗਰਾਮ ਨੂੰ ਵੰਡਣ ਦਾ ਉਦੇਸ਼ ਹੈ ਕਿ ਇਹ ਵਰਤਣਯੋਗ ਹੋਵੇਗਾ, ਪਰ ਬਿਨਾਂ ਕਿਸੇ ਵਾਰੰਟੀ; "
++"ਵਿਕਰੇਤਾ ਦੀ ਗਾਰੰਟੀ ਤੋਂ ਵੀ ਬਿਨਾਂ ਜਾਂ ਖਾਸ ਉਦੇਸ਼ ਦੇ ਯੋਗ ਹੋਣ ਦੀ ਗਾਰੰਟੀ ਤੋਂ ਬਿਨਾਂ। "
++"ਵੇਰਵੇ ਲਈ GNU ਜਨਰਲ ਪਬਲਿਕ ਲਾਈਸੈੰਸ ਵੇਖੋ।\n"
+ "\n"
+-"ਤੁਹਾਨੂੰ ਇਸ ਪਰੋਗਰਾਮ ਨਾਲ GNU ਜਨਰਲ ਪਬਲਿਕ ਲਾਈਸੈੰਸ ਦੀ ਇੱਕ ਕਾਪੀ ਮਿਲਣੀ ਚਾਹੀਦੀ ਹੈ; ਜੇ ਨਹੀਂ, ਤਾਂ "
+-"ਫਰੀ ਸਾਫਟਵੇਅਰ ਫਾਊਡੇਸ਼ਨ, Inc., 675 Mass Ave, Cambridge, MA 02139, USA ਨੂੰ ਲਿਖੋ।"
++"ਤੁਹਾਨੂੰ ਇਸ ਪਰੋਗਰਾਮ ਨਾਲ GNU ਜਨਰਲ ਪਬਲਿਕ ਲਾਈਸੈੰਸ ਦੀ ਇੱਕ ਕਾਪੀ ਮਿਲਣੀ ਚਾਹੀਦੀ ਹੈ; "
++"ਜੇ ਨਹੀਂ, ਤਾਂ ਫਰੀ ਸਾਫਟਵੇਅਰ ਫਾਊਡੇਸ਼ਨ, Inc., 675 Mass Ave, Cambridge, MA 02139, "
++"USA ਨੂੰ ਲਿਖੋ।"
+ 
+-#: ../src/kickstartGui.py:125 ../src/kickstartGui.py:302
++#: ../src/kickstartGui.py:125
++#: ../src/kickstartGui.py:302
+ #, python-format
+ msgid ""
+ "The following error was found while parsing your kickstart configuration:\n"
+ "\n"
+ "%s"
+-msgstr ""
+-"ਹੇਠਲੀ ਗਲਤੀ ਮਿਲੀ ਜਦੋਂ ਤੁਹਾਡੀ ਕਿੱਕਸਟਾਰਟ ਸੰਰਚਨਾ ਦੀ ਜਾਂਚ ਕੀਤੀ:\n"
++msgstr "ਹੇਠਲੀ ਗਲਤੀ ਮਿਲੀ ਜਦੋਂ ਤੁਹਾਡੀ ਕਿੱਕਸਟਾਰਟ ਸੰਰਚਨਾ ਦੀ ਜਾਂਚ ਕੀਤੀ:\n"
+ "\n"
+ "%s"
+ 
+-#: ../src/kickstartGui.py:128 ../src/kickstartGui.py:305
++#: ../src/kickstartGui.py:128
++#: ../src/kickstartGui.py:305
+ #, python-format
+ msgid "The kickstart file %s could not be opened."
+ msgstr "ਕਿੱਕਸਟਾਰਟ ਫਾਇਲ %s ਨੂੰ ਖੋਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ।"
+ 
+-#: ../src/kickstartGui.py:133 ../src/kickstartGui.py:310
++#: ../src/kickstartGui.py:133
++#: ../src/kickstartGui.py:310
+ msgid "Error Parsing Kickstart Config"
+ msgstr "ਕਿੱਕਸਟਾਰਟ ਸੰਰਚਨਾ ਜਾਂਚ ਦੌਰਾਨ ਗਲਤੀ"
+ 
+@@ -249,7 +233,8 @@
+ msgid "The file \"%s\" cannot be accessed."
+ msgstr "ਫਾਇਲ \"%s\" ਨੂੰ ਖੋਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ।"
+ 
+-#: ../src/kickstartGui.py:341 ../src/kickstartGui.py:352
++#: ../src/kickstartGui.py:341
++#: ../src/kickstartGui.py:352
+ #: ../src/packages.py:207
+ msgid "Retrieving package information"
+ msgstr "ਪੈਕੇਜ ਜਾਣਕਾਰੀ ਪ੍ਰਾਪਤ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ"
+@@ -259,45 +244,34 @@
+ msgid "You currently have %d software RAID partition(s) free to use."
+ msgstr "ਤੁਹਾਡੇ ਕੋਲ ਇਸ ਸਮੇ %d ਸਾਫਟਵੇਅਰ ਰੇਡ ਭਾਗ ਵਰਤਣ ਲਈ ਖਾਲੀ ਹਨ।"
+ 
+-#: ../src/install.py:132
+-msgid "Please enter an NFS server."
+-msgstr "ਇੱਕ NFS ਸਰਵਰ ਦਿਓ ਜੀ।"
+-
+-#: ../src/install.py:135
+-msgid "Please enter an NFS directory."
+-msgstr "ਇੱਕ NFS ਡਾਇਰੈਕਟਰੀ ਦਿਓ ਜੀ।"
+-
+-#: ../src/install.py:146
+-msgid "Please enter an FTP server."
+-msgstr "ਇੱਕ FTP ਸਰਵਰ ਦਾ ਨਾਂ ਦਿਓ ਜੀ।"
+-
+-#: ../src/install.py:153
+-msgid "Please enter an FTP directory."
+-msgstr "ਇੱਕ FTP ਡਾਇਰੈਕਟਰੀ ਦਿਓ ਜੀ।"
+-
+-#: ../src/install.py:159
+-msgid "Please enter an FTP user name."
+-msgstr "ਇੱਕ FTP ਉਪਭੋਗੀ ਨਾਂ ਦਿਓ ਜੀ।"
++#: ../src/partition.py:72
++msgid "Device/\n"
++"Partition Number"
++msgstr "ਜੰਤਰ/\n"
++"ਭਾਗ ਨੰਬਰ"
+ 
+-#: ../src/install.py:162
+-msgid "Please enter an FTP password."
+-msgstr "ਇੱਕ FTP ਪਾਸਵਰਡ ਦਿਓ ਜੀ।"
++#: ../src/partition.py:74
++msgid "Mount Point/\n"
++"RAID"
++msgstr "ਮਾਊਂਟ ਸਥਿਤੀ/\n"
++"ਰੇਡ(RAID)"
+ 
+-#: ../src/install.py:178
+-msgid "Please enter an HTTP server."
+-msgstr "ਇੱਕ HTTP ਸਰਵਰ ਦਾ ਨਾਂ ਦਿਓ ਜੀ।"
++#: ../src/partition.py:76
++msgid "Type"
++msgstr "ਕਿਸਮ"
+ 
+-#: ../src/install.py:181
+-msgid "Please enter an HTTP server directory."
+-msgstr "ਇੱਕ HTTP ਸਰਵਰ ਡਾਇਰੈਕਟਰੀ ਦਿਓ ਜੀ।"
++#: ../src/partition.py:78
++msgid "Format"
++msgstr "ਫਾਰਮੈਟ"
+ 
+-#: ../src/install.py:203
+-msgid "Please enter a hard drive directory."
+-msgstr "ਇੱਕ ਹਾਰਡ ਡਿਸਕ ਡਾਇਰੈਕਟਰੀ ਦਿਓ ਜੀ।"
++#: ../src/partition.py:80
++msgid "Size (MB)"
++msgstr "ਅਕਾਰ (MB)"
+ 
+-#: ../src/install.py:206
+-msgid "Please enter a hard drive partition."
+-msgstr "ਇੱਕ ਹਾਰਡ ਡਿਸਕ ਭਾਗ ਦਿਓ ਜੀ।"
++#: ../src/partition.py:98
++#: ../src/partition.py:138
++msgid "Please select a partition from the list."
++msgstr "ਕਿਰਪਾ ਕਰਕੇ ਸੂਚੀ ਵਿੱਚੋ ਭਾਗ ਚੁਣੋ।"
+ 
+ #: ../src/packages.py:144
+ #, python-format
+@@ -307,8 +281,8 @@
+ "\n"
+ "%s"
+ msgstr ""
+-"ਸੈੱਟਅੱਪ ਗਲਤੀ ਕਰਕੇ ਪੈਕੇਜ ਚੋਣ ਅਯੋਗ ਕੀਤੀ ਗਈ ਹੈ।  ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਰਿਪੋਜ਼ਟਰੀ ਸੰਰਚਨਾ ਠੀਕ ਕਰੋ ਅਤੇ "
+-"ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।\n"
++"ਸੈੱਟਅੱਪ ਗਲਤੀ ਕਰਕੇ ਪੈਕੇਜ ਚੋਣ ਅਯੋਗ ਕੀਤੀ ਗਈ ਹੈ।  ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਰਿਪੋਜ਼ਟਰੀ "
++"ਸੰਰਚਨਾ ਠੀਕ ਕਰੋ ਅਤੇ ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।\n"
+ "\n"
+ "%s"
+ 
+@@ -320,7 +294,48 @@
+ msgid ""
+ "Package selection is disabled due to problems downloading package "
+ "information."
+-msgstr "ਪੈਕੇਜ ਚੋਣ ਭਾਗ ਨੂੰ ਪੈਕੇਜ ਜਾਣਕਾਰੀ ਡਾਊਨਲੋਡ ਕਰਨ ਦੌਰਾਨ ਆਈ ਸਮੱਸਿਆ ਕਰਕੇ ਆਯੋਗ ਕੀਤਾ ਗਿਆ ਹੈ।"
++msgstr ""
++"ਪੈਕੇਜ ਚੋਣ ਭਾਗ ਨੂੰ ਪੈਕੇਜ ਜਾਣਕਾਰੀ ਡਾਊਨਲੋਡ ਕਰਨ ਦੌਰਾਨ ਆਈ ਸਮੱਸਿਆ ਕਰਕੇ ਆਯੋਗ ਕੀਤਾ "
++"ਗਿਆ ਹੈ।"
++
++#: ../src/network.py:73
++msgid "Device"
++msgstr "ਜੰਤਰ"
++
++#: ../src/network.py:76
++msgid "Network Type"
++msgstr "ਨੈੱਟਵਰਕ ਕਿਸਮ"
++
++#: ../src/network.py:79
++#: ../src/network.py:114
++#: ../src/network.py:196
++#: ../src/network.py:251
++#: ../src/network.py:347
++msgid "Static IP"
++msgstr "ਸਥਿਰ IP"
++
++#: ../src/network.py:161
++#: ../src/network.py:219
++msgid "Please fill in the network information"
++msgstr "ਕਿਰਪਾ ਕਰਕੇ ਨੈੱਟਵਰਕ ਜਾਣਕਾਰੀ ਭਰੋ"
++
++#: ../src/network.py:173
++#: ../src/network.py:231
++msgid "Please enter a valid gateway address."
++msgstr "ਕਿਰਪਾ ਕਰਕੇ ਸਹੀ ਗੇਟਵੇ ਐਡਰੈੱਸ ਦਿਓ।"
++
++#: ../src/network.py:185
++#: ../src/network.py:243
++msgid "Please enter a valid nameserver address."
++msgstr "ਕਿਰਪਾ ਕਰਕੇ ਸਹੀ ਨਾਂ-ਸਰਵਰ ਐਡਰੈੱਸ ਦਿਓ।"
++
++#: ../src/network.py:271
++#, python-format
++msgid ""
++"A network device with the name %s already exists.  Please choose another "
++"device name"
++msgstr ""
++"ਨੈੱਟਵਰਕ ਜੰਤਰ ਨਾਂ %s ਨਾਲ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਵੱਖਰਾ ਜੰਤਰ ਚੁਣੋ।"
+ 
+ #: ../src/savedialog.py:77
+ #, python-format
+@@ -347,7 +362,8 @@
+ msgid ""
+ "You have choosen the following configuration. Click Save File to save the "
+ "kickstart file."
+-msgstr "ਤੁਸੀਂ ਹੇਠਲੀ ਸੰਰਚਨਾ ਚੁਣੀ ਹੈ। ਕਿੱਕਸਟਾਰਟ ਫਾਇਲ ਨੂੰ ਸੰਭਾਲਣ ਲਈ ਫਾਇਲ ਸੰਭਾਲੋ ਦਬਾਓ।"
++msgstr ""
++"ਤੁਸੀਂ ਹੇਠਲੀ ਸੰਰਚਨਾ ਚੁਣੀ ਹੈ। ਕਿੱਕਸਟਾਰਟ ਫਾਇਲ ਨੂੰ ਸੰਭਾਲਣ ਲਈ ਫਾਇਲ ਸੰਭਾਲੋ ਦਬਾਓ।"
+ 
+ #: ../src/bootloader.py:150
+ msgid "Grub passwords do not match.  Please try again."
+@@ -371,7 +387,8 @@
+ msgstr "ext4"
+ 
+ #. _("physical volume (LVM)"):"lvm",
+-#: ../src/partWindow.py:100 ../src/partWindow.py:175
++#: ../src/partWindow.py:100
++#: ../src/partWindow.py:175
+ msgid "software RAID"
+ msgstr "ਸਾਫਟਵੇਅਰ ਰੇਡ"
+ 
+@@ -387,15 +404,21 @@
+ msgid "PPC PReP Boot"
+ msgstr "PPC PReP ਬੂਟ"
+ 
+-#: ../src/partWindow.py:317 ../src/partWindow.py:599 ../src/raidWindow.py:241
++#: ../src/partWindow.py:317
++#: ../src/partWindow.py:599
++#: ../src/raidWindow.py:241
+ msgid "Yes"
+ msgstr "ਹਾਂ"
+ 
+-#: ../src/partWindow.py:319 ../src/partWindow.py:601 ../src/raidWindow.py:243
++#: ../src/partWindow.py:319
++#: ../src/partWindow.py:601
++#: ../src/raidWindow.py:243
+ msgid "No"
+ msgstr "ਨਹੀਂ"
+ 
+-#: ../src/partWindow.py:342 ../src/partWindow.py:357 ../src/partWindow.py:376
++#: ../src/partWindow.py:342
++#: ../src/partWindow.py:357
++#: ../src/partWindow.py:376
+ #: ../src/partWindow.py:390
+ msgid "Auto"
+ msgstr "ਆਟੋ"
+@@ -413,13 +436,18 @@
+ #, python-format
+ msgid ""
+ "The mount point \"%s\" is already in use.  Please select another mount point."
+-msgstr "ਮਾਊਂਟ ਸਥਿਤੀ \"%s\" ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਹੋਰ ਮਾਊਂਟ ਸਥਿਤੀ ਦੀ ਚੋਣ ਕਰੋ।"
++""
++msgstr ""
++"ਮਾਊਂਟ ਸਥਿਤੀ \"%s\" ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਹੋਰ ਮਾਊਂਟ ਸਥਿਤੀ ਦੀ ਚੋਣ "
++"ਕਰੋ।"
+ 
+ #: ../src/partWindow.py:524
+ msgid ""
+ "To create a new RAID partition, you must specify either a hard drive device "
+ "name or an existing partition."
+-msgstr "ਰੇਡ ਭਾਗ ਬਣਾਓ ਲਈ ਤੁਹਾਨੂੰ ਹਾਰਡ-ਡਰਾਈਵ ਜੰਤਰ ਦਾ ਨਾਂ ਜਾਂ ਮੌਜੂਦ ਭਾਗ ਨੂੰ ਨਿਰਧਾਰਿਤ ਕਰੋ।"
++msgstr ""
++"ਰੇਡ ਭਾਗ ਬਣਾਓ ਲਈ ਤੁਹਾਨੂੰ ਹਾਰਡ-ਡਰਾਈਵ ਜੰਤਰ ਦਾ ਨਾਂ ਜਾਂ ਮੌਜੂਦ ਭਾਗ ਨੂੰ ਨਿਰਧਾਰਿਤ "
++"ਕਰੋ।"
+ 
+ #: ../src/partWindow.py:561
+ msgid "Specify a device on which to create the partition."
+@@ -430,8 +458,8 @@
+ "The partition you specified does not end in a number.  Partitions must have "
+ "a partition number such as \"hda1\" or \"sda3\"."
+ msgstr ""
+-"ਭਾਗ, ਜੋ ਤੁਸੀਂ ਨਿਰਧਾਰਿਤ ਕੀਤਾ ਹੈ, ਇੱਕ ਅੰਕ ਨਾਲ ਖਤਮ ਨਹੀਂ ਹੁੰਦਾ ਹੈ। ਭਾਗ ਦਾ ਨਾਂ ਭਾਗ ਨੰਬਰ ਜਿਵੇਂ "
+-"ਕਿ \"hda1\" ਜਾਂ \"sda3\" ਆਦਿ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।"
++"ਭਾਗ, ਜੋ ਤੁਸੀਂ ਨਿਰਧਾਰਿਤ ਕੀਤਾ ਹੈ, ਇੱਕ ਅੰਕ ਨਾਲ ਖਤਮ ਨਹੀਂ ਹੁੰਦਾ ਹੈ। ਭਾਗ ਦਾ ਨਾਂ "
++"ਭਾਗ ਨੰਬਰ ਜਿਵੇਂ ਕਿ \"hda1\" ਜਾਂ \"sda3\" ਆਦਿ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।"
+ 
+ #: ../src/raidWindow.py:201
+ #, python-format
+@@ -443,7 +471,8 @@
+ msgid "You must select at least 3 partitions in order to use RAID %s"
+ msgstr "ਤੁਹਾਨੂੰ ਘੱਟੋ-ਘੱਟ 3 ਭਾਗ ਲੋੜੀਂਦੇ ਹਨ ਤਾਂ ਕਿ ਰੇਡ %s ਬਣਾਇਆ ਜਾ ਸਕੇ "
+ 
+-#: ../src/raidWindow.py:221 ../src/raidWindow.py:247
++#: ../src/raidWindow.py:221
++#: ../src/raidWindow.py:247
+ msgid "Raid Devices"
+ msgstr "ਰੇਡ ਜੰਤਰ"
+ 
+@@ -453,11 +482,11 @@
+ 
+ #: tmp/GroupSelector.glade.h:1
+ msgid "_Optional packages"
+-msgstr ""
++msgstr "ਵਿਕਲਪਿਕ ਪੰਡਾਂ (packages) (_O)"
+ 
+ #: tmp/GroupSelector.glade.h:2
+ msgid "dialog1"
+-msgstr ""
++msgstr "ਵਾਰਤਾਲਾਪ1"
+ 
+ #: tmp/GroupSelector.glade.h:3
+ msgid ""
+@@ -465,22 +494,25 @@
+ "but may provide additional functionality.  Please choose the packages which "
+ "you would like to have installed."
+ msgstr ""
++"ਇਸ ਸਮੂਹ ਨਾਲ ਸੰਬੰਧਿਤ ਕੁੱਝ ਪੰਡਾਂ (packages) ਇੰਸਟਾਲ ਕਰਨ ਵਿੱਚ ਲੋੜੀਂਦੀਆਂ ਨਹੀਂ ਹਨ "
++"ਪਰ ਕੁੱਝ ਵਾਧੂ ਕਾਰਜ-ਕੁਸ਼ਲਤਾ ਮੁਹੱਈਆ ਕਰ ਸਕਦੇ ਹਨ। ਕਿਰਪਾ ਕਰ ਕੇ ਉਹ ਪੰਡਾਂ (packages) "
++"ਚੁਣੋ ਜਿਹੜੀਆਂ ਤੁਸੀਂ ਇੰਸਟਾਲ ਕਰਨਾ ਪਸੰਦ ਕਰੋਗੇ।"
+ 
+ #: tmp/GroupSelector.glade.h:4
+ msgid "_Select"
+-msgstr ""
++msgstr "ਚੁਣੋ (_S)"
+ 
+ #: tmp/GroupSelector.glade.h:5
+ msgid "_Select all optional packages"
+-msgstr ""
++msgstr "ਸਾਰੀਆਂ ਵਿਕਲਪਿਕ ਪੰਡਾਂ ਚੁਣੋ (_S)"
+ 
+ #: tmp/GroupSelector.glade.h:6
+ msgid "_Deselect"
+-msgstr ""
++msgstr "ਚੋਣ ਤੋਂ ਹਟਾਓ"
+ 
+ #: tmp/GroupSelector.glade.h:7
+ msgid "_Deselect all optional packages"
+-msgstr ""
++msgstr "ਸਾਰੀਆਂ ਵਿਕਲਪਿਕ ਪੰਡਾਂ (packages) ਦੀਆਂ ਚੋਣਾਂ ਹਟਾਓ (_D)"
+ 
+ #: tmp/system-config-kickstart.glade.h:1
+ msgid "Partition Options"
+@@ -991,12 +1023,10 @@
+ msgstr "SELinux:"
+ 
+ #: tmp/system-config-kickstart.glade.h:128
+-msgid ""
+-"Active\n"
++msgid "Active\n"
+ "Warn\n"
+ "Disabled\n"
+-msgstr ""
+-"Active\n"
++msgstr "Active\n"
+ "Warn\n"
+ "Disabled\n"
+ 
+@@ -1005,11 +1035,9 @@
+ msgstr "ਸੁਰੱਖਿਆ ਪੱਧਰ:"
+ 
+ #: tmp/system-config-kickstart.glade.h:133
+-msgid ""
+-"Enable firewall\n"
++msgid "Enable firewall\n"
+ "Disable firewall\n"
+-msgstr ""
+-"ਫਾਇਰਵਾਲ ਯੋਗ\n"
++msgstr "ਫਾਇਰਵਾਲ ਯੋਗ\n"
+ "ਫਾਇਰਵਾਲ ਅਯੋਗ\n"
+ 
+ #: tmp/system-config-kickstart.glade.h:136
+@@ -1029,12 +1057,10 @@
+ msgstr "ਪਹਿਲੇ ਬੂਟ ਸਮੇਂ, ਨਿਰਧਾਰਨ ਏਜੰਟ ਹੈ:"
+ 
+ #: tmp/system-config-kickstart.glade.h:140
+-msgid ""
+-"Disabled\n"
++msgid "Disabled\n"
+ "Enabled\n"
+ "Enabled in reconfiguration mode\n"
+-msgstr ""
+-"ਅਯੋਗ\n"
++msgstr "ਅਯੋਗ\n"
+ "ਯੋਗ\n"
+ "ਮੁੜ-ਸੰਰਚਨਾ ਮੋਡ ਵਿੱਚ  ਯੋਗ ਕਰੋ\n"
+ 
+@@ -1056,8 +1082,8 @@
+ "An error in this script might cause your kickstart installation to fail. Do "
+ "not include the %pre command at the beginning."
+ msgstr ""
+-"ਇਸ ਸਕ੍ਰਿਪਟ ਵਿੱਚ ਗਲਤੀ ਕਿੱਕਸਟਾਰਟ ਇੰਸਟਾਲੇਸ਼ਨ ਨੂੰ ਅਸਫਲ ਕਰ ਸਕਦੀ ਹੈ। ਸ਼ੁਰੂ ਵੇਲੇ %post ਕਮਾਂਡ ਸ਼ਾਮਿਲ "
+-"ਨਾ ਕਰੋ।"
++"ਇਸ ਸਕ੍ਰਿਪਟ ਵਿੱਚ ਗਲਤੀ ਕਿੱਕਸਟਾਰਟ ਇੰਸਟਾਲੇਸ਼ਨ ਨੂੰ ਅਸਫਲ ਕਰ ਸਕਦੀ ਹੈ। ਸ਼ੁਰੂ ਵੇਲੇ "
++"%post ਕਮਾਂਡ ਸ਼ਾਮਿਲ ਨਾ ਕਰੋ।"
+ 
+ #: tmp/system-config-kickstart.glade.h:149
+ msgid "Use an interpreter:"
+@@ -1078,8 +1104,8 @@
+ "An error in this script might cause your kickstart installation to fail. Do "
+ "not include the %post command at the beginning."
+ msgstr ""
+-"ਇਸ ਸਕ੍ਰਿਪਟ ਵਿੱਚ ਗਲਤੀ ਕਿੱਕਸਟਾਰਟ ਇੰਸਟਾਲੇਸ਼ਨ ਨੂੰ ਅਸਫਲ ਕਰ ਸਕਦੀ ਹੈ। ਸ਼ੁਰੂ ਵੇਲੇ %post ਕਮਾਂਡ ਸ਼ਾਮਿਲ "
+-"ਨਾ ਕਰੋ।"
++"ਇਸ ਸਕ੍ਰਿਪਟ ਵਿੱਚ ਗਲਤੀ ਕਿੱਕਸਟਾਰਟ ਇੰਸਟਾਲੇਸ਼ਨ ਨੂੰ ਅਸਫਲ ਕਰ ਸਕਦੀ ਹੈ। ਸ਼ੁਰੂ ਵੇਲੇ "
++"%post ਕਮਾਂਡ ਸ਼ਾਮਿਲ ਨਾ ਕਰੋ।"
+ 
+ #: tmp/system-config-kickstart.glade.h:155
+ msgid "Run outside of the chroot environment"
+@@ -1100,22 +1126,24 @@
+ 
+ #: tmp/system-config-kickstart.glade.h:160
+ msgid ""
+-"Software RAID allows you to combine several disks into a larger RAID "
+-"device.  A RAID device can be configured to provide additional speed and "
+-"reliability compared to using an individual drive.  For more information on "
+-"using RAID devices please consult the kickstart documentation."
+-msgstr ""
+-"ਸਾਫਟਵੇਅਰ ਰੇਡ ਤੁਹਾਨੂੰ ਕਈ ਡਿਸਕਾਂ ਨੂੰ ਇੱਕ ਵੱਡੇ ਰੇਡ ਜੰਤਰ ਦੇ ਰੂਪ ਵਿੱਚ ਵਰਤਣ ਲਈ ਸਹਾਇਕ ਹੈ। ਇੱਕ ਰੇਡ ਜੰਤਰ "
+-"ਵੱਖਰੀ ਡਰਾਈਵ ਦੀ ਬਜਾਏ ਜਿਆਦਾ ਗਤੀ ਅਤੇ ਜਿਆਦਾ ਭਰੋਸੇਯੋਗਤਾ ਉਪਲੱਬਧ ਕਰਵਾਉਂਦਾ ਹੈ। ਵਧੇਰੇ ਜਾਣਕਾਰੀ "
+-"ਲਈ ਕਿੱਕਸਟਾਰਟ ਦਸਤਾਵੇਜ਼ ਦੀ ਸਹਾਇਤਾ ਲਵੋ।"
++"Software RAID allows you to combine several disks into a larger RAID device. "
++" A RAID device can be configured to provide additional speed and reliability "
++"compared to using an individual drive.  For more information on using RAID "
++"devices please consult the kickstart documentation."
++msgstr ""
++"ਸਾਫਟਵੇਅਰ ਰੇਡ ਤੁਹਾਨੂੰ ਕਈ ਡਿਸਕਾਂ ਨੂੰ ਇੱਕ ਵੱਡੇ ਰੇਡ ਜੰਤਰ ਦੇ ਰੂਪ ਵਿੱਚ ਵਰਤਣ ਲਈ "
++"ਸਹਾਇਕ ਹੈ। ਇੱਕ ਰੇਡ ਜੰਤਰ ਵੱਖਰੀ ਡਰਾਈਵ ਦੀ ਬਜਾਏ ਜਿਆਦਾ ਗਤੀ ਅਤੇ ਜਿਆਦਾ ਭਰੋਸੇਯੋਗਤਾ "
++"ਉਪਲੱਬਧ ਕਰਵਾਉਂਦਾ ਹੈ। ਵਧੇਰੇ ਜਾਣਕਾਰੀ ਲਈ ਕਿੱਕਸਟਾਰਟ ਦਸਤਾਵੇਜ਼ ਦੀ ਸਹਾਇਤਾ ਲਵੋ।"
+ 
+ #: tmp/system-config-kickstart.glade.h:161
+ msgid ""
+ "To use RAID you must first create at least two partitions of type 'software "
+ "RAID'.  Then you can create a RAID device which can be formatted and mounted."
++""
+ msgstr ""
+-"ਰੇਡ ਵਰਤਣ ਲਈ ਤੁਹਾਨੂੰ ਪਹਿਲਾ ਘੱਟੋ-ਘੱਟ ਦੋ ਭਾਗ 'ਸਾਫਟਵੇਅਰ ਰੇਡ' ਕਿਸਮ ਦੇ ਬਣਾਉਣੇ ਪੈਣਗੇ। ਤਦ ਤੁਸੀਂ ਇੱਕ "
+-"ਰੇਡ ਜੰਤਰ ਬਣਾ ਸਕਦੇ ਹੋ ਜੋ ਕਿ ਫਾਰਮਿਟ ਅਤੇ ਮਾਊਂਟ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।"
++"ਰੇਡ ਵਰਤਣ ਲਈ ਤੁਹਾਨੂੰ ਪਹਿਲਾ ਘੱਟੋ-ਘੱਟ ਦੋ ਭਾਗ 'ਸਾਫਟਵੇਅਰ ਰੇਡ' ਕਿਸਮ ਦੇ ਬਣਾਉਣੇ "
++"ਪੈਣਗੇ। ਤਦ ਤੁਸੀਂ ਇੱਕ ਰੇਡ ਜੰਤਰ ਬਣਾ ਸਕਦੇ ਹੋ ਜੋ ਕਿ ਫਾਰਮਿਟ ਅਤੇ ਮਾਊਂਟ ਕੀਤਾ ਜਾ ਸਕਦਾ "
++"ਹੈ।"
+ 
+ #: tmp/system-config-kickstart.glade.h:162
+ msgid "Choose one of the following options:"

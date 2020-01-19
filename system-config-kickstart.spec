@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
 Version: 2.9.2
-Release: 1%{?dist}
+Release: 4%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
 ExclusiveOS: Linux
@@ -12,6 +12,8 @@ BuildArch: noarch
 # our distribution.  Thus the source is only available from
 # within this srpm.
 Source0: %{name}-%{version}.tar.gz
+Patch0: system-config-kickstart-2.9.2_translation_updates.patch
+Patch1: system-config-kickstart-2.9.2-add-xfs.patch
 
 Obsoletes: ksconfig, redhat-config-kickstart, mkkickstart
 BuildRequires: desktop-file-utils, intltool, gettext
@@ -27,6 +29,8 @@ Kickstart Configurator is a graphical tool for creating kickstart files.
 
 %prep
 %setup -q
+%patch0 -p2 -b .l10n
+%patch1 -p1 -b .xfs
 
 %build
 
@@ -68,6 +72,17 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Jan 21 2014 David Cantrell <dcantrell@redhat.com> - 2.9.2-4
+- Add 'xfs' as a valid filesystem option
+  Resolves: rhbz#1037494
+
+* Tue Jan 21 2014 David Cantrell <dcantrell@redhat.com> - 2.9.2-3
+- Update translations
+  Resolves: rhbz#1030380
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 2.9.2-2
+- Mass rebuild 2013-12-27
+
 * Fri Jul 26 2013 Chris Lumens <clumens@redhat.com> - 2.9.2-1
 - Transifex has moved, so update the config. (clumens)
 - Remove the Japanese-specific man page. (clumens)

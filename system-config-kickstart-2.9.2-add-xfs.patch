@@ -1,0 +1,42 @@
+diff -up system-config-kickstart-2.9.2/src/partWindow.py.orig system-config-kickstart-2.9.2/src/partWindow.py
+--- system-config-kickstart-2.9.2/src/partWindow.py.orig	2013-07-26 11:18:12.000000000 -0400
++++ system-config-kickstart-2.9.2/src/partWindow.py	2014-01-21 15:07:28.479404808 -0500
+@@ -95,7 +95,7 @@ class partWindow:
+             self.mountPointCombo.append_text(i)
+ 
+         self.fsTypesDict = { _("ext2"):"ext2", _("ext3"):"ext3",
+-                             _("ext4"): "ext4",
++                             _("ext4"): "ext4", _("xfs"):"xfs",
+ #                               _("physical volume (LVM)"):"lvm",
+                              _("software RAID"):"raid",
+                              _("swap"):"swap", _("vfat"):"vfat",
+@@ -107,7 +107,7 @@ class partWindow:
+             self.fsTypeCombo.append_text(i)
+ 
+         try:
+-            fsTypeSelect = self.fsTypes.index("ext4")
++            fsTypeSelect = self.fsTypes.index("xfs")
+         except:
+             fsTypeSelect = 0
+ 
+@@ -230,7 +230,7 @@ class partWindow:
+         self.mountPointCombo.entry.set_text("")
+         self.mountPointCombo.set_sensitive(True)
+         try:
+-            fsTypeSelect = self.fsTypes.index("ext4")
++            fsTypeSelect = self.fsTypes.index("xfs")
+         except:
+             fsTypeSelect = 0
+         self.fsTypeCombo.set_active(fsTypeSelect)
+diff -up system-config-kickstart-2.9.2/src/raidWindow.py.orig system-config-kickstart-2.9.2/src/raidWindow.py
+--- system-config-kickstart-2.9.2/src/raidWindow.py.orig	2013-07-26 11:18:12.000000000 -0400
++++ system-config-kickstart-2.9.2/src/raidWindow.py	2014-01-21 15:08:09.711823256 -0500
+@@ -61,7 +61,7 @@ class raidWindow:
+         self.raid_cancel_button = xml.get_widget("raid_cancel_button")
+ 
+         mountPoints = ["/", "/boot", "/home", "/var", "/tmp", "/usr", "/opt"]
+-        self.fsTypesList = [ "ext2", "ext3", "ext4", "raid", "swap", "vfat" ]
++        self.fsTypesList = [ "ext2", "ext3", "ext4", "raid", "swap", "vfat", "xfs" ]
+         self.raidDeviceList = ['md0', 'md1', 'md2', 'md3', 'md4', 'md5',
+                                'md6', 'md7', 'md8', 'md9', 'md10', 'md11',
+                                'md12', 'md13', 'md14', 'md15']
