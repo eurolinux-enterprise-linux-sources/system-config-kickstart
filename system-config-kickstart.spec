@@ -1,7 +1,7 @@
 Summary: A graphical interface for making kickstart files
 Name: system-config-kickstart
-Version: 2.9.2
-Release: 4%{?dist}
+Version: 2.9.6
+Release: 1%{?dist}
 URL: http://fedoraproject.org/wiki/SystemConfig/Tools
 License: GPLv2+
 ExclusiveOS: Linux
@@ -12,8 +12,6 @@ BuildArch: noarch
 # our distribution.  Thus the source is only available from
 # within this srpm.
 Source0: %{name}-%{version}.tar.gz
-Patch0: system-config-kickstart-2.9.2_translation_updates.patch
-Patch1: system-config-kickstart-2.9.2-add-xfs.patch
 
 Obsoletes: ksconfig, redhat-config-kickstart, mkkickstart
 BuildRequires: desktop-file-utils, intltool, gettext
@@ -29,8 +27,6 @@ Kickstart Configurator is a graphical tool for creating kickstart files.
 
 %prep
 %setup -q
-%patch0 -p2 -b .l10n
-%patch1 -p1 -b .xfs
 
 %build
 
@@ -72,6 +68,22 @@ fi
 %attr(0644,root,root) %{_datadir}/icons/hicolor/48x48/apps/system-config-kickstart.png
 
 %changelog
+* Tue Sep 13 2016 David Cantrell <david.l.cantrell@gmail.com> - 2.9.6-1
+- Update translations
+  Resolves: rhbz#1303020
+
+* Thu May 19 2016 David Cantrell <david.l.cantrell@gmail.com> - 2.9.5-1
+- Bring back the translations lost in the move from Transifex to Zanata
+  Related: rhbz#1303020
+
+* Tue May 10 2016 David Cantrell <dcantrell@redhat.com> - 2.9.4-1
+- New version.
+  Related: rhbz#1303020
+
+* Tue May 10 2016 David Cantrell <dcantrell@redhat.com> - 2.9.3-1
+- Fetch latest translations from Zanata
+  Resolves: rhbz#1303020
+
 * Tue Jan 21 2014 David Cantrell <dcantrell@redhat.com> - 2.9.2-4
 - Add 'xfs' as a valid filesystem option
   Resolves: rhbz#1037494
@@ -623,7 +635,7 @@ fi
 - present an error message if run in console mode (bug #78737)
 * Tue Dec 10 2002 Brent Fox <bfox@redhat.com> 2.3.5-1
 - Rebuild for completeness
-* Tue Dec 02 2002 Brent Fox <bfox@redhat.com> 2.3.4-3
+* Mon Dec 02 2002 Brent Fox <bfox@redhat.com> 2.3.4-3
 - more work on the profiling.  exposed it with a command line option.  I think that's good enough.
 * Mon Dec 02 2002 Brent Fox <bfox@redhat.com> 2.3.4-2
 - rebuild for completeness
@@ -651,7 +663,7 @@ fi
 * Tue Aug 27 2002 Brent Fox <bfox@redhat.com> 2.3.3-1
 - Make customizing the firewall settings work again
 
-* Thu Aug 23 2002 Brent Fox <bfox@redhat.com> 2.3.2-17
+* Fri Aug 23 2002 Brent Fox <bfox@redhat.com> 2.3.2-17
 - bump release num
 
 * Sat Aug 17 2002 Brent Fox <bfox@redhat.com> 2.3.2-16
