@@ -1,0 +1,95 @@
+#!/usr/bin/python2
+#
+# Chris Lumens <clumens@redhat.com>
+# Brent Fox <bfox@redhat.com>
+# Tammy Fox <tfox@redhat.com>
+#
+# Copyright (C) 2000-2008 Red Hat, Inc.
+#
+# This copyrighted material is made available to anyone wishing to use, modify,
+# copy, or redistribute it subject to the terms and conditions of the GNU
+# General Public License v.2 or, at your option, any later version.  This
+# program is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY expressed or implied, including the implied warranties of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
+# Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program; if not, write to the Free Software Foundation, Inc., 51
+# Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.  Any Red Hat
+# trademarks that are incorporated in the source code or documentation are not
+# subject to the GNU General Public License and may only be used or replicated
+# with the express permission of Red Hat, Inc. 
+
+import signal
+import sys, os
+
+sys.path.insert(0, "/usr/share/system-config-kickstart")
+
+##
+## I18N
+##
+import gettext
+gettext.textdomain("system-config-kickstart")
+_ = lambda x: gettext.ldgettext("system-config-kickstart", x)
+
+def useCliMode(value):
+    from pykickstart.version import makeVersion
+    import profileSystem
+
+    ksHandler = makeVersion()
+    profileSystem = profileSystem.ProfileSystem(ksHandler)
+
+    try:
+        fd = open(value, "w")
+    except KickstartError, e:
+        print _("The following error occurred while saving the "
+                "kickstart config %s: %s") % (value, e)
+        return
+
+    fd.write(ksHandler.__str__())
+    fd.close()
+
+if __name__ == "__main__":
+    import optparse
+
+    signal.signal (signal.SIGINT, signal.SIG_DFL)
+
+    file = None
+    op = optparse.OptionParser(add_help_option=False)
+    op.add_option("-g", "--generate", nargs=1, type="string")
+    op.add_option("-d", "--display", nargs=1, type="string")
+    op.add_option("-h", "--help", action="store_true", default=False)
+
+    (opts, extra) = op.parse_args()
+
+    if opts.generate:
+        useCliMode(opts.generate)
+        sys.exit(1)
+
+    if opts.display:
+        os.environ["DISPLAY"] = opts.display
+
+    if opts.help:
+        print _("""Usage: system-config-kickstart [--help] [--generate <filename>] [--display=<display#>] [<kickstart_filename>]
+
+--help                  Print out this message
+--generate <filename>   Generate a kickstart file from the current machine and write
+                        it to <filename>.  This option runs on the console, so it is
+                        useful for servers that do not have X currently running.
+<kickstart_filename>    This option will cause the GUI to launch with the values from
+                        the kickstart file already filled in.""")
+        sys.exit(1)
+
+    if extra:
+        file = extra[0]
+
+    try:
+        import kickstartGui
+    except RuntimeError:
+        print (_("Could not open display because no X server is running."))
+        print (_("Try running 'system-config-kickstart --help' for a list of options."))
+        sys.exit(0)
+
+    ksGui = kickstartGui.kickstartGui(file)
+    ksGui.run()
